@@ -45,7 +45,7 @@ The theoretical probability is approximately 19.6245%.
 
 The convergence graph compares the simulated probability with the theoretical probability as the number of experiments increases.
 
-![Convergence Graph](screenshots/probability_convergence.png) 
+![Convergence Graph](probability_convergence.png) 
 
 ## Learning Outcomes
 This project helped me explore and evaluate probability theory, random simulations, statistical estimation, Python programming and data visualisation.
