@@ -56,27 +56,27 @@ def plot_convergence(probabilities):
 
 # Main program to calculate the estimated probability
 def main():
+
     try:
         trials = int(input("Enter the number of trials: "))
 
         if trials <= 0:
-                print("Please enter a positive number.")
-        else:
-            probabilities= run_simulation(trials)
-            print('Simulation completed.')
-
+            print("Please enter a positive number.")
+            return
 
     except ValueError:
         print("Please enter a valid integer.")
         return
 
-
     probabilities = run_simulation(trials)
+
     simulated = probabilities[-1]
     theoretical = theoretical_probability()
+
     error = calculate_error(theoretical, simulated)
 
-    print("\n --- Monte Carlo Simulation Results ---")
+    print("\n--- Monte Carlo Simulation Results ---")
+
     print("Total trials:", trials)
     print("Theoretical probability:", theoretical * 100, "%")
     print("Simulated probability:", simulated * 100, "%")
@@ -85,6 +85,8 @@ def main():
     plot_convergence(probabilities)
 
 
+if __name__ == "__main__":
+    main()
 
 
 
